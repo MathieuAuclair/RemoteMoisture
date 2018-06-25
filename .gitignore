@@ -1,0 +1,3 @@
+*.pem
+nohup.out
+.env
