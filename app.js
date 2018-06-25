@@ -1,5 +1,6 @@
+require('dotenv').config();
 var DOMAIN = 'weetogo.com';
-var mailgun = require('mailgun-js')({ apiKey: "", domain: DOMAIN });
+var mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN, domain: DOMAIN });
 var express = require('express');
 var bodyParser = require('body-parser');
 var https = require('https');
