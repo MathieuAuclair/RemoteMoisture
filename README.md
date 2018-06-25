@@ -1,4 +1,6 @@
 # Simple remote code execution server
+For those who like firebase, but don't want to pay for it!
+
 
 to generate the .pem
 
