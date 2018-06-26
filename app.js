@@ -19,8 +19,9 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 var list = mailgun.lists(`update@${DOMAIN}`);
 
 https.createServer({
-	key: fs.readFileSync('key.pem'),
-	cert: fs.readFileSync('cert.pem')
+	key: fs.readFileSync('/etc/letsencrypt/live/moistybot.com/privkey.pem'),
+	cert: fs.readFileSync('/etc/letsencrypt/live/moistybot.com/fullchain.pem'),
+	ca: fs.readFileSync('/etc/letsencrypt/live/moistybot.com/chain.pem')
 }, app).listen(3000);
 
 app.get('/', function (request, response) {
@@ -30,9 +31,6 @@ app.get('/', function (request, response) {
 
 
 app.post("/add", function(request, response){
-
-	console.log("new email");
-
 	var user = {
 		subscribed: true,
 		address: request.body.email,

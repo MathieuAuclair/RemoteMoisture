@@ -1,6 +1,17 @@
 # Simple remote code execution server
 For those who like firebase, but don't want to pay for it!
 
+## Generate valid certificate
+Checkout this tutorial using let's encript!
+
+[[TUTORIAL]](https://linode.com/docs/security/ssl/install-lets-encrypt-to-create-ssl-certificates/)
+
+your certification should appear in ```/etc/letsencrypt/live/www.yourwebsite.com/```
+
+
+## Self signed certificate (pretty useless...)
+to use this certificate you need to tell firefox to trust your custom certificate
+
 
 to generate the .pem
 
